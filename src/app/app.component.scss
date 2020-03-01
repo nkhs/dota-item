@@ -1,0 +1,60 @@
+.base-one-row {
+  border-bottom: 1px red solid;
+  .avatar {
+    width: 300px;
+  }
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+.search {
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.one-row {
+  border-bottom: 1px solid #fff;
+  margin-bottom: 10px;
+  .avatar {
+    width: 80px;
+  }
+  .name {
+    vertical-align: top;
+  }
+  .require-list {
+    // background: #f7f7f7;
+    .req-item {
+      width: 350px;
+      display: inline-block;
+      .require-avatar {
+        width: 60px;
+      }
+
+      .of {
+        // outline: 1px red solid;
+        position: relative;
+        width: 200px;
+        height: 240px;
+        .label {
+          display: inline-block;
+          position: absolute;
+          width: 100%;
+          line-height: 40px;
+        }
+        .of-avatar {
+          width: 100%;
+          position: absolute;
+          top: 40px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<input placeholder="search" [(ngModel)]="search" (keyup)="onChangeSearch()" class="search">
+
+
+
+<div *ngFor="let item of dataDisplay" class="one-row">
+  <img [src]="item.img" class="avatar">
+  <label class="name">{{item.name}} - <span class="red">{{item.of}}</span> &nbsp;<b>{{item.Buy}}</b></label>
+  <section *ngIf="item.requiresObjectList" class="require-list">
+    <div *ngFor="let reItem of item.requiresObjectList" class="req-item">
+      <img [src]="reItem.img" class="require-avatar">
+      <label>{{reItem.name}} </label>
+      <div class="of">
+        <div class="red" *ngIf="reItem.ofObj != null">
+          <span class="label">{{reItem.ofObj.name}}</span>
+          <img [src]="reItem.ofObj.img" class="of-avatar">
+        </div>
+        <div class="green" *ngIf="reItem.ofObj == null">
+          <span>{{reItem.of}}</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+</div>
+
+<!-- <div *ngFor="let item of base" class="base-one-row">
+  <img [src]="item.img" class="avatar">
+  <label class="name">{{item.name}}</label>
+</div> -->
+
+<!-- http://dota-frenzy.blogspot.com/p/dota-item-list.html -->

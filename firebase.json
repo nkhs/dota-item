@@ -1,0 +1,23 @@
+{
+  "hosting": {
+    "public": "./dist/dota",
+    "rewrites": [
+      {
+        "source": "robots.txt",
+        "destination": "/robots.txt"
+      },
+      {
+        "source": "sitemap.xml",
+        "destination": "/sitemap.xml"
+      },
+      {
+      "source": "**",
+      "destination": "/index.html"
+    }],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
