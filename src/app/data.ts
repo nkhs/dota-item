@@ -72,7 +72,6 @@ export class Const {
         {
             "img": "http://2.bp.blogspot.com/_tis3EB_O2T4/S82nxOcqSpI/AAAAAAAAADw/DZ-E8nF_axY/s1600/Kellen+Dagger+of+Escape.gif",
             "name": "Kelen's Dagger",
-            "f2": "Blink (active) : Blink for up to 1200 distance. Cannot be used if you have been damaged by  player based damage in the last 3 seconds, Cannot be used by Vengeful Spirit or Pudge",
             "buy_sell": "Buy 2150 Sell 1075",
             "f": "75 mana, 14 seconds cooldown",
             "of": "Cache of Quel-thelan"
@@ -520,7 +519,7 @@ export class Const {
             "img": "http://2.bp.blogspot.com/_tis3EB_O2T4/TGP4cSUnElI/AAAAAAAAARA/Q-d-nPURgOo/s320/Linken%27s+Sphere.jpg",
             "name": "Linken's Sphere  (5175)",
             "f": "Blocks most targetted spells  once every 20 seconds (passive)",
-            "requires": "Perseverence (1750), Ultimate Orb (2100), Recipe (1325)",
+            "requires": "Perseverance (1750), Ultimate Orb (2100), Recipe (1325)",
             "of": "Protectorate"
         },
         {
@@ -701,7 +700,7 @@ export class Const {
             "img": "http://3.bp.blogspot.com/_tis3EB_O2T4/TGP7wu2HYuI/AAAAAAAAATQ/13W45X0nl6M/s320/Cranium+Basher.jpg",
             "name": "Cranium Basher (3100)",
             "f": "+40 damage, +6 Strength",
-            "Requires": "Javelin (1500), Belt of Giant Strenght (450), Recipe (1150)",
+            "Requires": "Javelin (1500), Belt Of Giant Strength (450), Recipe (1150)",
             "of": "Ancient Weaponry"
         },
 
@@ -709,7 +708,7 @@ export class Const {
             "img": "http://4.bp.blogspot.com/_PvNE9xUmHBQ/S870YYwydoI/AAAAAAAABcI/ZHL9TdH0cAs/s320/Battlefury.jpg",
             "name": "Battle Fury (4350)",
             "f": "+65 damage, +150% mana regen, +6 HP/sec regen",
-            "Requires": "Broadsword (1200), Perseverence (1750), Claymore (1400)",
+            "Requires": "Broadsword (1200), Perseverance (1750), Claymore (1400)",
             "of": "Ancient Weaponry"
         },
         {
@@ -731,7 +730,7 @@ export class Const {
             "img": "http://3.bp.blogspot.com/_tis3EB_O2T4/TGP7xdqk8_I/AAAAAAAAATo/9B0hWtcXytA/s320/Armlet+of+Mordiggian.jpg",
             "name": "Armlet of Mordiggian (2600)",
             "f": "+9 damage, +15% attack speed, +5 armor, +5 hp regen",
-            "Requires": "Helm of Iron Will (950), Glove of Haste (500), Blades of Attack (450), Recipe (700)",
+            "Requires": "Helm of Iron Will (950), Gloves of Haste (500), Blades of Attack (450), Recipe (700)",
             "of": "Ancient Weaponry"
         },
 
@@ -739,7 +738,7 @@ export class Const {
             "img": "http://3.bp.blogspot.com/_PvNE9xUmHBQ/S88KSAqp7_I/AAAAAAAABcw/RJTgyv2mzbY/s320/Lothars+Edge.jpg",
             "name": "Lothar's Edge (3400)",
             "f": "+10 Attack Speed, +38 damage",
-            "Requires": "Claymore (1400), Quarter Staff (900), Recipe (1100)",
+            "Requires": "Claymore (1400), Quarter staff (900), Recipe (1100)",
             "of": "Ancient Weaponry"
         },
         {

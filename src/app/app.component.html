@@ -4,9 +4,18 @@
 
 <div *ngFor="let item of dataDisplay" class="one-row">
   <img [src]="item.img" class="avatar">
-  <label class="name">{{item.name}} - <span class="red">{{item.of}}</span> &nbsp;<b>{{item.Buy}}</b></label>
+  <span class="item-description">
+    <div>
+      <label class="name">{{item.name}} - <span class="red">{{item.of}}</span> &nbsp;<b>{{item.Buy}}</b>
+      </label>
+    </div>
+    <div>
+      <label class="function">{{item.f}}</label>
+    </div>
+  </span>
+
   <section *ngIf="item.requiresObjectList" class="require-list">
-    <div *ngFor="let reItem of item.requiresObjectList" class="req-item">
+    <div *ngFor="let reItem of item.requiresObjectList" class="require-item">
       <img [src]="reItem.img" class="require-avatar">
       <label>{{reItem.name}} </label>
       <div class="of">
