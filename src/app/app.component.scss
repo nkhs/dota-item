@@ -23,13 +23,15 @@
 .one-row {
   border-bottom: 1px solid #fff;
   margin-bottom: 10px;
+  padding-bottom: 10px;
 
   .avatar {
     width: 80px;
   }
   .item-description {
     display: inline-block;
-    width: 500px;
+    margin-left: 10px;
+    width: 900px;
     vertical-align: top;
     .name{
       font-size: 20px;;
@@ -38,6 +40,7 @@
   
   .require-list {
     // background: #f7f7f7;
+    margin-top: 10px;
     .require-item {
       width: 350px;
       display: inline-block;
