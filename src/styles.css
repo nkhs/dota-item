@@ -2,5 +2,6 @@
 body {
   font: normal normal 13px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
   color: #ffffff;
-  background: #000000 url(http://www.blogblog.com/1kt/awesomeinc/body_background_dark.png) repeat scroll top left;
+  /* background: #000000 url(http://www.blogblog.com/1kt/awesomeinc/body_background_dark.png) repeat scroll top left; */
+  background: #000000 repeat scroll top left;
 }

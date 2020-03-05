@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Const } from './data';
-
+import { StringUtil } from './StringUtil';
+import { environment } from '../environments/environment';
+import { from } from 'rxjs';
 
 declare let io: any;
 declare let firebase: any;
@@ -15,10 +17,10 @@ export class AppComponent implements OnInit {
   initSocket() {
     this.socket = io("https://localhost");
     this.socket.on('connect', () => {
-      console.log('connected');
+
     })
     this.socket.on('disconnect', () => {
-      console.log('disconnected');
+
     })
 
 
@@ -48,7 +50,7 @@ export class AppComponent implements OnInit {
       name = name.replace('  ', ' ');
       if (name == item.name || name.includes(item.name) || item.name.includes(name)) return item;
     }
-    // console.log(name)
+
     return null;
   }
   getOfObjectWithName(item) {
@@ -80,7 +82,7 @@ export class AppComponent implements OnInit {
     var commentsRef = firebase.database().ref(`dota/${this.COMPUTER}/`);
 
     commentsRef.on('child_added', (data) => {
-      console.log(data.key, data.val())
+
       this.search = data.val();
       this.onChangeSearch();
     });
@@ -90,14 +92,15 @@ export class AppComponent implements OnInit {
     //   snapshot.forEach(function (childSnapshot) {
     //     var childKey = childSnapshot.key;
     //     var childData = childSnapshot.val();
-    //     console.log(childKey, childData)
+
 
     //   });
     // });
 
   }
   ngOnInit(): void {
-    this.initFirebase();
+    if (environment.production)
+      this.initFirebase();
     // this.initSocket();
 
     for (var i = 0; i < this.base.length; i++) {
@@ -129,8 +132,7 @@ export class AppComponent implements OnInit {
         });
 
         item.requiresObjectList = list;
-        if (item.name.includes('Null Talisma'))
-          console.log(item.requiresObjectList)
+
         // item.RequiresList = item.Requires.split(',').map(req => req.trim());
       }
 
@@ -141,21 +143,70 @@ export class AppComponent implements OnInit {
         var Buy = parseInt(buy_sell.substring(0, buy_sell.indexOf(' Sell')))
 
         var Sell = parseInt(buy_sell.substring(buy_sell.indexOf('Sell') + 4, buy_sell.length));
-        // console.log(Buy, Sell)
+
         item.Buy = Buy;
         item.Sell = Sell;
       }
     }
+
+    for (var i = 0; i < this.data.length; i++) {
+      var item = this.data[i];
+      item.Used_to_make = this.findUsedToMake(item);
+    }
+    for (var i = 0; i < this.data.length; i++) {
+      var item = this.data[i];
+      item.Used_to_make = this.findUsedToMake(item);
+    }
+
+    this.data.sort((a, b) => {
+      return b.Used_to_make.length - a.Used_to_make.length
+    })
+
     this.dataDisplay = this.data;
     // this.dataDisplay = this.dataDisplay.sort((a: any, b: any) => {
     //   return a.Buy - b.Buy
     // })
   }
-
+  findUsedToMake(myItem) {
+    var list = []
+    for (var i = 0; i < this.data.length; i++) {
+      var item = this.data[i];
+      if (item.Requires == null) continue;
+      if (item.Requires.toLowerCase().includes(myItem.name.toLowerCase())) {
+        list.push(item);
+      }
+    }
+    return list;
+  }
   onChangeSearch() {
 
-    this.dataDisplay = this.data.filter(item => {
+    var filtered = this.data.filter(item => {
+
       if (item.name.toLowerCase().includes(this.search.toLowerCase())) return item
-    })
+      else {
+        if (StringUtil.isSimmilar(this.search, item.name)) {
+          return item
+        }
+      }
+    });
+
+    if (filtered.length == 0) {
+      var maxValue = StringUtil.similarity(this.search, this.data[0].name);
+      var similarIndex = 0;
+
+      this.data.forEach((item, index) => {
+        var similar = StringUtil.similarity(this.search, item.name);
+        if (maxValue < similar) {
+          maxValue = similar;
+          similarIndex = index;
+        }
+      });
+
+      filtered = [this.data[similarIndex]];
+    } else {
+      console.error('found', filtered.length)
+    }
+    this.dataDisplay = filtered;
+    console.error(similarIndex, filtered.length, this.dataDisplay.length, this.search)
   }
 }

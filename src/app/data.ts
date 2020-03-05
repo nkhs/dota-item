@@ -554,7 +554,8 @@ export class Const {
             "img": "http://2.bp.blogspot.com/_tis3EB_O2T4/TGP5P-cBlpI/AAAAAAAAARo/KLQvyLB-Owc/s320/Guinsoo%27s+Scythe+of+Vyse.jpg",
             "name": "Guinsoo's Scythe  of Vyse (5675)",
             "f": "+35 Intelligence, +200% mana regen, +10 Strength, +10 Agility, Hex  (active) turn  enemy into sheep for 3.5 seconds, 100 mana, 35 seconds cooldown",
-            "of": "Arcane Sanctum"
+            "of": "Arcane Sanctum",
+            "Requires": "Ultimate Orb (2100), Mystic Staff (2700), Void Stone (875)"
         },
         {
             "img": "http://4.bp.blogspot.com/_tis3EB_O2T4/TGP9XMUKL0I/AAAAAAAAAVY/AE9aoOo16ng/s320/Orchid+Malevolence.jpg",
@@ -597,52 +598,54 @@ export class Const {
             "Requires": "Point Booster(1200),  Ogre Axe (1000), Blade of Alacrity(1000), Staff of Wizardry (1000)",
             "of": "Arcane Sanctum"
         },
+        // Supportive Vestment
         {
             "img": "http://1.bp.blogspot.com/_tis3EB_O2T4/TGP6QYYSpGI/AAAAAAAAASY/XWYSFH2w9o4/s320/Mekansm.jpg",
-            "name": "Mekansm  (2306)",
-            "f": "+5 to all stats, +3 armor, +4 HP  regen aura, Heal (active) +2 armor, 250hp, 750  AoE, 150 mana, 45 seconds cooldown. Cannot healed twice on 30 seconds",
-            "of": "Arcane Sanctum"
+            "name": "Mekansm (2306)",
+            "f": "+5 to all stats, +3 armor, +4 HP regen aura",
+            "Requires": "Headdress of Rejuvenation (603), Natherezim Buckler (803), Recipe (900)",
+            "of": "Supportive Vestment"
         },
         {
             "img": "http://1.bp.blogspot.com/_tis3EB_O2T4/TGP6Qi3NUkI/AAAAAAAAASg/ehmJj1XMZfY/s320/Vladimir%27s+Offering.jpg",
             "name": "Vladmir's Offering (2050)",
             "f": "+16% Vampiric Aura (melee), +0.80 Mana Regeneration Aura, +5 Armor Aura, +15% Damage Aura",
             "Requires": "Ring of Basilius  (500), Mask of Death (900),",
-            "of": "Arcane Sanctum"
+            "of": "Supportive Vestment"
         },
         {
             "img": "http://1.bp.blogspot.com/_PvNE9xUmHBQ/TFzb109PvxI/AAAAAAAABmg/Ml4ix1k8WAc/s320/Arcane+Boots.jpg",
             "name": "Arcane Boots  (1500)",
             "f": "+65 Movement Speed, +250 Mana, Replenish Mana (active) replenish 135 mana to nearby allies (600 AoE)",
             "Requires": "Energy Booster  (1000), Boots of Speed (500)",
-            "of": "Arcane Sanctum"
+            "of": "Supportive Vestment"
         },
         {
             "img": "http://4.bp.blogspot.com/_tis3EB_O2T4/TGP7FSWFE_I/AAAAAAAAASo/FqBZUr3e5TE/s320/Flying+Courier.jpg",
             "name": "Flying Courier  (400)",
             "f": "Summon a very fast flying unit with 6 items slot, 150 hp, 10 armor,die, all the items will be fall to the ground. Has magic immunity.",
             "Requires": "Animal Courier  (200), Recipe (200)",
-            "of": "Arcane Sanctum"
+            "of": "Supportive Vestment"
         },
         {
             "img": "http://2.bp.blogspot.com/_tis3EB_O2T4/TGP7Fvf6RgI/AAAAAAAAASw/vd_GxJyXMWc/s320/Nathrezim+Buckler.jpg",
             "name": "Natherezim  Buckler (803)",
             "f": "+5 armor, +2 all stats, Area bonus armor  (active) +2  armor, 10 mana, 25 seconds cooldown",
-            "of": "Arcane Sanctum"
+            "of": "Supportive Vestment"
         },
         {
             "img": "http://4.bp.blogspot.com/_tis3EB_O2T4/TGP7F7yH7HI/AAAAAAAAAS4/ExPp_E_MLQ0/s320/Ring+of+Basilius.jpg",
             "name": "Ring of Basilius  (500)",
             "f": "+6 damage, 1 armor, Brilliance Aura +0.65  mana regen, Devotion Aura +2 armor",
             "Requires": "Ring of Protection  (175), Sobi Mask (325)",
-            "of": "Arcane Sanctum"
+            "of": "Supportive Vestment"
         },
         {
             "img": "http://2.bp.blogspot.com/_PvNE9xUmHBQ/SjX3_dztq9I/AAAAAAAAA6Y/iaRKEMB5_Mw/s400/Pipe+of+insight.jpg",
             "name": "Khadgard's Pipe of Insight (3753)",
             "f": "+10 HP/sec regen, +30% magic resistance",
             "requires": "Sobi Mask (325), 2 X  Gauntlets of Ogre Strength (2 x 150), Recipe (250)",
-            "of": "Arcane Sanctum"
+            "of": "Supportive Vestment"
         },
 
         {
@@ -659,6 +662,7 @@ export class Const {
             "Requires": "Ring of Basilius (500), Mask of Death (900), Ring of Regeneration (350), Recipe (300)",
             "of": "Supportive Vestment"
         },
+        // Ancient Weaponry
         {
             "img": "http://4.bp.blogspot.com/_PvNE9xUmHBQ/S88KZApWnkI/AAAAAAAABdA/BrPVqdVV4vY/s320/Divine+Rapier.jpg",
             "name": "Divine Rapier (6200)",

@@ -1,10 +1,10 @@
 <input placeholder="search" [(ngModel)]="search" (keyup)="onChangeSearch()" class="search form-control">
 
-<div class="log" style="color: red;">
+<!-- <div class="log" style="color: red;">
   <div class="log-item" *ngFor="let logItem of log">
     {{logItem}}
   </div>
-</div>
+</div> -->
 
 <div *ngFor="let item of dataDisplay" class="one-row">
   <img [src]="item.img" class="avatar">
@@ -35,6 +35,64 @@
 
     </div>
 
+  </section>
+  <section class="makeOf-list require-list" *ngIf="item.Used_to_make.length > 0">
+    <div class="used-to-makeof-label">Used of make {{item.Used_to_make.length}}</div>
+    <div class="require-item" *ngFor="let makeItem of item.Used_to_make">
+
+      <img [src]="makeItem.img" class="require-avatar">
+      <label>{{makeItem.name}} </label>
+      <div class="of">
+        <div class="red" *ngIf="makeItem.ofObj != null">
+          <span class="label">{{makeItem.ofObj.name}}</span>
+          <img [src]="makeItem.ofObj.img" class="of-avatar">
+        </div>
+        <div class="green" *ngIf="makeItem.ofObj == null">
+          <span>{{makeItem.of}}</span>
+        </div>
+      </div>
+
+      <aside class="sub-makeOf-list require-list" *ngIf="makeItem.Used_to_make.length > 0">
+        <div class="used-to-makeof-label">Used of make {{makeItem.Used_to_make.length}}</div>
+        <div class="require-item" *ngFor="let makeSubItem of makeItem.Used_to_make">
+
+          <img [src]="makeSubItem.img" class="require-avatar">
+          <label>{{makeSubItem.name}} </label>
+          <div class="of">
+            <div class="red" *ngIf="makeSubItem.ofObj != null">
+              <span class="label">{{makeSubItem.ofObj.name}}</span>
+              <img [src]="makeSubItem.ofObj.img" class="of-avatar">
+            </div>
+            <div class="green" *ngIf="makeSubItem.ofObj == null">
+              <span>{{makeSubItem.of}}</span>
+            </div>
+          </div>
+
+          
+          <!-- <article class="sub-sub-makeOf-list require-list" *ngIf="makeSubItem.Used_to_make.length > 0">
+            
+            <div class="used-to-makeof-label">Used of make {{makeSubItem.Used_to_make.length}}</div>
+            <div class="require-item" *ngFor="let makeSubSubItem of makeSubItem.Used_to_make">
+
+              <img [src]="makeSubSubItem.img" class="require-avatar">
+              <label>{{makeSubSubItem.name}} </label>
+              <div class="of">
+                <div class="red" *ngIf="makeSubSubItem.ofObj != null">
+                  <span class="label">{{makeSubSubItem.ofObj.name}}</span>
+                  <img [src]="makeSubSubItem.ofObj.img" class="of-avatar">
+                </div>
+                <div class="green" *ngIf="makeSubSubItem.ofObj == null">
+                  <span>{{makeSubSubItem.of}}</span>
+                </div>
+              </div>
+            </div>
+          </article> -->
+          
+
+        </div>
+      </aside>
+
+    </div>
   </section>
 </div>
 
