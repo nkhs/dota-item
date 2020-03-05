@@ -1,6 +1,10 @@
 <input placeholder="search" [(ngModel)]="search" (keyup)="onChangeSearch()" class="search form-control">
 
-
+<div class="log" style="color: red;">
+  <div class="log-item" *ngFor="let logItem of log">
+    {{logItem}}
+  </div>
+</div>
 
 <div *ngFor="let item of dataDisplay" class="one-row">
   <img [src]="item.img" class="avatar">
